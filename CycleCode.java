@@ -3,7 +3,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.DayOfWeek;
 import java.util.*;
-//import java.io.*;
 
 public class CycleCode {
 
@@ -44,24 +43,6 @@ public class CycleCode {
     public static void main(String[] args) {
         // Example dates
         String[] dates = {"2025-12-25"};
-        // String filepath = "/Users/manavbharath/Google Drive/Programming/python/appa/cycle_code_data.tsv";
-        // try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
-        //     String line;
-        //     while ((line = br.readLine()) != null) {
-        //         String[] values = line.split("\t");
-
-        //         DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        //         DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-        //         LocalDate date = LocalDate.parse(values[2], inputFormatter);
-        //         String formattedDate = date.format(outputFormatter);
-        //         if (!cycleCode(formattedDate).equals(values[0])) {
-        //             System.out.println(line);
-        //         }
-        //     }
-        // } catch (IOException e) {
-        //     e.printStackTrace();
-        // }
         for (String date: dates) System.out.println(cycleCode(date));
     }
 }
