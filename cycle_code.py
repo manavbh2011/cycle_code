@@ -1,24 +1,4 @@
-from datetime import date, timedelta
-import csv
-
-
-def iterate_days_of_year():
-    from_date = date(2024, 1, 1)
-    to_date = date(2025, 12, 31)
-
-    delta = timedelta(days=1)
-    current_date = from_date
-
-    data: list = [['date','cycle_code']]
-    while current_date <= to_date:
-        cycle_code: str = get_cycle_code(current_date)
-        data.append([current_date, cycle_code])
-        current_date += delta
-
-    with open('./cp99-date-encoding-py.csv', 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerows(data)
-
+from datetime import date
 
 def get_cycle_code(datetime_date) -> str:
     """
@@ -47,5 +27,4 @@ def get_cycle_code(datetime_date) -> str:
 
 
 if __name__ == "__main__":
-    #iterate_days_of_year()
     print(get_cycle_code(date(2024, 3, 7)))
